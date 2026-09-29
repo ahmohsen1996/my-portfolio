@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed  Ali - Full Stack Developer Portfolio</title>
+    <title>Ahmed Mohsen Ali - Full Stack & Laravel Developer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,6 +14,7 @@
                     colors: {
                         brand: {
                             50: '#f0fdf4',
+                            400: '#4ade80',
                             500: '#22c55e',
                             600: '#16a34a',
                             700: '#15803d',
@@ -25,13 +26,29 @@
     </script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+        .glass-card:hover {
+            border-color: rgba(34, 197, 94, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.15);
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-wider text-brand-500">Ahmed<span class="text-white">.dev</span></a>
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-wider text-brand-500 flex items-center gap-2">
+                <i class="fa-solid fa-code text-xl"></i> Ahmed<span class="text-white">.dev</span>
+            </a>
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-brand-500 transition">About</a>
                 <a href="#skills" class="hover:text-brand-500 transition">Skills</a>
@@ -41,7 +58,7 @@
                 <a href="#contact" class="hover:text-brand-500 transition">Contact</a>
             </nav>
             <div class="flex items-center gap-4">
-                <a href="mailto:ahmohsen900@gmail.com" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition shadow-lg shadow-brand-600/20">
+                <a href="mailto:ahmohsen900@gmail.com" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-brand-600/20 hover:scale-105">
                     <i class="fa-solid fa-envelope"></i> Let's Talk
                 </a>
             </div>
@@ -49,67 +66,72 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-brand-400 text-xs font-semibold mb-6">
-            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span> Available for Opportunities
+    <section class="relative pt-36 pb-24 md:pt-48 md:pb-32 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
+        <!-- Background Glow Effect -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-brand-400 text-xs font-semibold mb-6 shadow-inner">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-ping"></span> Available for Opportunities
         </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white">
-            Hi, I'm <span class="text-brand-500">Ahmed Mohsen Ali</span>
+        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-600">Ahmed Mohsen Ali</span>
         </h1>
-        <p class="text-xl md:text-2xl font-medium text-slate-400 mb-8">
-            Back-End & Full Stack Laravel Developer
+        <p class="text-xl md:text-2xl font-semibold text-slate-300 mb-6 h-8">
+            <span id="typewriter" class="border-r-2 border-brand-500 pr-1">Back-End & Full Stack Laravel Developer</span>
         </p>
         <p class="max-w-2xl text-slate-400 text-base md:text-lg mb-10 leading-relaxed">
-            Motivated and detail-oriented Laravel Developer seeking to contribute skills in PHP, Laravel, and modern web technologies to build scalable, high-performance web applications.
+            Motivated and detail-oriented Laravel Developer seeking to build scalable, high-performance web applications with clean code and robust architecture.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="#projects" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-brand-600/20">
-                View Projects
+            <a href="#projects" class="bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all shadow-xl shadow-brand-600/20 hover:scale-105 flex items-center gap-2">
+                <i class="fa-solid fa-rocket"></i> View Projects
             </a>
-            <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700 transition">
+            <a href="#contact" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-3.5 rounded-xl border border-slate-800 transition-all hover:border-slate-700">
                 Get in Touch
             </a>
         </div>
-        <div class="flex items-center gap-6 mt-12 text-slate-400 text-xl">
-            <a href="https://github.com/Ahmohsen96" target="_blank" class="hover:text-brand-500 transition"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/ahmed-mohsen-69083b22a" target="_blank" class="hover:text-brand-500 transition"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:ahmohsen900@gmail.com" class="hover:text-brand-500 transition"><i class="fa-solid fa-envelope"></i></a>
+        <div class="flex items-center gap-6 mt-14 text-slate-400 text-2xl">
+            <a href="https://github.com/Ahmohsen96" target="_blank" class="hover:text-brand-400 transition hover:scale-110"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/ahmed-mohsen-69083b22a" target="_blank" class="hover:text-brand-400 transition hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:ahmohsen900@gmail.com" class="hover:text-brand-400 transition hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-950/50 border-y border-slate-800 px-6">
+    <section id="about" class="py-24 bg-slate-900/40 border-y border-slate-800/80 px-6 relative">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-3">About Me</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">About Me</h2>
                 <p class="text-slate-400 max-w-md mx-auto">A brief overview of my background, location, and career focus.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div class="space-y-6 text-slate-300 leading-relaxed">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-300 leading-relaxed text-base md:text-lg">
                     <p>
                         Passionate about clean code, continuous learning, and solving real-world problems through efficient backend development. Experienced in designing client-side and server-side architectures, writing robust APIs, and handling enterprise ERP systems.
                     </p>
                     <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-sm">
-                        <div><strong class="text-white">Location:</strong> Shebin El-kom, Menofyia, Egypt</div>
-                        <div><strong class="text-white">Military Status:</strong> Completed (Dec 2021)</div>
-                        <div><strong class="text-white">Languages:</strong> Arabic, English</div>
-                        <div><strong class="text-white">Email:</strong> ahmohsen900@gmail.com</div>
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800"><strong class="text-white block mb-1">Location:</strong> Shebin El-kom, Menofyia</div>
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800"><strong class="text-white block mb-1">Military Status:</strong> Completed (2021)</div>
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800"><strong class="text-white block mb-1">Languages:</strong> Arabic, English</div>
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800"><strong class="text-white block mb-1">Email:</strong> ahmohsen900@gmail.com</div>
                     </div>
                 </div>
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl space-y-4">
-                    <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-star text-brand-500 mr-2"></i> Highlights</h3>
-                    <ul class="space-y-3 text-sm text-slate-300">
+                <div class="glass-card p-8 rounded-3xl shadow-2xl space-y-5">
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-brand-500"></i> Key Highlights
+                    </h3>
+                    <ul class="space-y-4 text-sm md:text-base text-slate-300">
                         <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-circle-check text-brand-500 mt-1.5"></i>
                             Develop, maintain, and enhance web applications using Laravel.
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-circle-check text-brand-500 mt-1.5"></i>
                             Write clean, efficient, and well-documented code meeting industry standards.
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            Experience working with ERP systems and core business processes.
+                            <i class="fa-solid fa-circle-check text-brand-500 mt-1.5"></i>
+                            Extensive experience working with ERP systems and core business processes.
                         </li>
                     </ul>
                 </div>
@@ -118,44 +140,53 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto">
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white mb-3">Technical Skills</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Technical Skills</h2>
             <p class="text-slate-400 max-w-md mx-auto">Technologies and methodologies I work with daily.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-slate-800/50 border border-slate-700/60 p-6 rounded-2xl">
-                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-code"></i></div>
-                <h3 class="text-lg font-bold text-white mb-2">Languages & Concepts</h3>
-                <p class="text-sm text-slate-400">PHP, Progress 4GL, OOP, Design Patterns, SOLID Principles, REST API</p>
+            <div class="glass-card p-8 rounded-3xl transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Languages & Concepts</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">PHP, Progress 4GL, OOP, Design Patterns, SOLID Principles, REST API</p>
             </div>
-            <div class="bg-slate-800/50 border border-slate-700/60 p-6 rounded-2xl">
-                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-layer-group"></i></div>
-                <h3 class="text-lg font-bold text-white mb-2">Frameworks & Tools</h3>
-                <p class="text-sm text-slate-400">Laravel, Bootstrap, Livewire, Scrum, ClickUp, Trello, Git & GitHub</p>
+            <div class="glass-card p-8 rounded-3xl transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Frameworks & Tools</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Laravel, Bootstrap, Livewire, Scrum, ClickUp, Trello, Git & GitHub</p>
             </div>
-            <div class="bg-slate-800/50 border border-slate-700/60 p-6 rounded-2xl">
-                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-database"></i></div>
-                <h3 class="text-lg font-bold text-white mb-2">Web Tech & Database</h3>
-                <p class="text-sm text-slate-400">HTML5, CSS3, JavaScript ES6, MySQL, Linux, Apache, Figma</p>
+            <div class="glass-card p-8 rounded-3xl transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Web Tech & Database</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">HTML5, CSS3, JavaScript ES6, MySQL, Linux, Apache, Figma</p>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-slate-950/50 border-y border-slate-800 px-6">
+    <section id="experience" class="py-24 bg-slate-900/40 border-y border-slate-800/80 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-3">Professional Experience</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Professional Experience</h2>
                 <p class="text-slate-400 max-w-md mx-auto">My professional career trajectory and major responsibilities.</p>
             </div>
             <div class="space-y-8 max-w-4xl mx-auto">
                 <!-- Experience 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative">
-                    <span class="text-xs font-semibold px-3 py-1 bg-brand-500/10 text-brand-400 rounded-full inline-block mb-3">11/2024 - Present</span>
-                    <h3 class="text-xl font-bold text-white">Full Stack Developer</h3>
-                    <p class="text-brand-500 text-sm font-medium mb-4">Dania Air • Saudi Arabia (On Site)</p>
-                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                <div class="glass-card p-8 md:p-10 rounded-3xl relative transition hover:border-brand-500/50">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-bold px-3.5 py-1.5 bg-brand-500/10 text-brand-400 rounded-full border border-brand-500/20">11/2024 - Present</span>
+                        <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-location-dot text-brand-500 mr-1"></i> Saudi Arabia (On Site)</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Full Stack Developer</h3>
+                    <p class="text-brand-400 text-sm font-semibold mb-6">Dania Air</p>
+                    <ul class="space-y-3 text-sm md:text-base text-slate-300 list-disc list-inside">
                         <li>Worked with ERP systems to manage and integrate core business processes across departments.</li>
                         <li>Involved in modules implementation: Inventory, Sales, HR, CRM, Purchasing, User Management, Production Calculation, and Accounting.</li>
                         <li>Automated and optimized workflows to enhance operational efficiency and reduce manual tasks.</li>
@@ -163,22 +194,28 @@
                     </ul>
                 </div>
                 <!-- Experience 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative">
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-800 text-slate-300 rounded-full inline-block mb-3">05/2023 - 05/2024</span>
-                    <h3 class="text-xl font-bold text-white">Back End Developer</h3>
-                    <p class="text-brand-500 text-sm font-medium mb-4">Medgulf Company • Saudi Arabia (Remotely)</p>
-                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                <div class="glass-card p-8 md:p-10 rounded-3xl relative transition hover:border-brand-500/50">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-bold px-3.5 py-1.5 bg-slate-800 text-slate-300 rounded-full border border-slate-700">05/2023 - 05/2024</span>
+                        <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-location-dot text-brand-500 mr-1"></i> Saudi Arabia (Remotely)</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Back End Developer</h3>
+                    <p class="text-brand-400 text-sm font-semibold mb-6">Medgulf Company</p>
+                    <ul class="space-y-3 text-sm md:text-base text-slate-300 list-disc list-inside">
                         <li>Designed client-side and server-side architecture.</li>
                         <li>Wrote effective APIs and maintained detailed technical documentation.</li>
                         <li>Developed and managed well-functioning databases and web applications.</li>
                     </ul>
                 </div>
                 <!-- Experience 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative">
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-800 text-slate-300 rounded-full inline-block mb-3">02/2022 - 02/2023</span>
-                    <h3 class="text-xl font-bold text-white">Back End Developer</h3>
-                    <p class="text-brand-500 text-sm font-medium mb-4">T square Company • Egypt</p>
-                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                <div class="glass-card p-8 md:p-10 rounded-3xl relative transition hover:border-brand-500/50">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-bold px-3.5 py-1.5 bg-slate-800 text-slate-300 rounded-full border border-slate-700">02/2022 - 02/2023</span>
+                        <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-location-dot text-brand-500 mr-1"></i> Egypt</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Back End Developer</h3>
+                    <p class="text-brand-400 text-sm font-semibold mb-6">T square Company</p>
+                    <ul class="space-y-3 text-sm md:text-base text-slate-300 list-disc list-inside">
                         <li>Developed new features to facilitate related procedures and tools.</li>
                         <li>Contributed to all phases of the software development lifecycle.</li>
                         <li>Tested websites across different browsers and devices and resolved user feedback issues.</li>
@@ -189,102 +226,106 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white mb-3">Featured Projects</h2>
-            <p class="text-slate-400 max-w-md mx-auto">A selection of web apps and systems I have built.</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Featured Projects</h2>
+            <p class="text-slate-400 max-w-md mx-auto">A selection of high-performance web apps and enterprise solutions I built.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-white">Fashion Trendy</h3>
-                        <span class="text-xs px-2.5 py-1 bg-brand-500/10 text-brand-400 rounded-lg font-medium">Laravel & Livewire</span>
+                        <h3 class="text-2xl font-bold text-white">Fashion Trendy</h3>
+                        <span class="text-xs px-3 py-1 bg-brand-500/10 text-brand-400 rounded-full font-semibold border border-brand-500/20">Laravel & Livewire</span>
                     </div>
-                    <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+                    <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
                         Full-featured e-commerce clothing store with dynamic product listings, shopping cart, order management, user authentication, product filtering, real-time cart updates, and payment gateway integration.
                     </p>
                 </div>
-                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-700/60 pt-4">
-                    <span class="px-2 py-1 bg-slate-800 rounded">E-Commerce</span>
-                    <span class="px-2 py-1 bg-slate-800 rounded">Real-time</span>
+                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-800 pt-4">
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">E-Commerce</span>
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">Real-time</span>
                 </div>
             </div>
 
-            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-white">Sahm EL-araby</h3>
-                        <span class="text-xs px-2.5 py-1 bg-brand-500/10 text-brand-400 rounded-lg font-medium">RESTful API</span>
+                        <h3 class="text-2xl font-bold text-white">Sahm EL-araby</h3>
+                        <span class="text-xs px-3 py-1 bg-brand-500/10 text-brand-400 rounded-full font-semibold border border-brand-500/20">RESTful API</span>
                     </div>
-                    <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+                    <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
                         RESTful API-driven order delivery system to manage customer orders, delivery tracking, and status updates, allowing users to place orders and receive live status updates.
                     </p>
                 </div>
-                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-700/60 pt-4">
-                    <span class="px-2 py-1 bg-slate-800 rounded">Laravel API</span>
-                    <span class="px-2 py-1 bg-slate-800 rounded">Delivery System</span>
+                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-800 pt-4">
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">Laravel API</span>
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">Delivery System</span>
                 </div>
             </div>
 
-            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-white">Artigianos</h3>
-                        <span class="text-xs px-2.5 py-1 bg-brand-500/10 text-brand-400 rounded-lg font-medium">Subscription Platform</span>
+                        <h3 class="text-2xl font-bold text-white">Artigianos</h3>
+                        <span class="text-xs px-3 py-1 bg-brand-500/10 text-brand-400 rounded-full font-semibold border border-brand-500/20">Subscription Platform</span>
                     </div>
-                    <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+                    <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
                         Educational courses website for users to browse, subscribe, and purchase courses. Implemented user registration, course listing, detailed pages with video previews, and secure payment integration.
                     </p>
                 </div>
-                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-700/60 pt-4">
-                    <span class="px-2 py-1 bg-slate-800 rounded">EdTech</span>
-                    <span class="px-2 py-1 bg-slate-800 rounded">Payment Gateway</span>
+                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-800 pt-4">
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">EdTech</span>
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">Payment Gateway</span>
                 </div>
             </div>
 
-            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-white">ERP System Implementation</h3>
-                        <span class="text-xs px-2.5 py-1 bg-brand-500/10 text-brand-400 rounded-lg font-medium">Enterprise</span>
+                        <h3 class="text-2xl font-bold text-white">ERP System Implementation</h3>
+                        <span class="text-xs px-3 py-1 bg-brand-500/10 text-brand-400 rounded-full font-semibold border border-brand-500/20">Enterprise</span>
                     </div>
-                    <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+                    <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
                         Hands-on experience with Enterprise Resource Planning systems, including custom module implementation, workflow automation, data synchronization, and cross-department integration.
                     </p>
                 </div>
-                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-700/60 pt-4">
-                    <span class="px-2 py-1 bg-slate-800 rounded">ERP</span>
-                    <span class="px-2 py-1 bg-slate-800 rounded">Business Automation</span>
+                <div class="flex gap-2 flex-wrap text-xs text-slate-400 border-t border-slate-800 pt-4">
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">ERP</span>
+                    <span class="px-3 py-1 bg-slate-900 rounded-lg border border-slate-800">Business Automation</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education & Certificates -->
-    <section id="education" class="py-20 bg-slate-950/50 border-y border-slate-800 px-6">
+    <section id="education" class="py-24 bg-slate-900/40 border-y border-slate-800/80 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
             <div>
-                <h2 class="text-2xl font-bold text-white mb-6"><i class="fa-solid fa-graduation-cap text-brand-500 mr-2"></i> Education</h2>
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-                    <span class="text-xs text-brand-400 font-semibold">09/2015 - 01/2020</span>
-                    <h3 class="text-lg font-bold text-white">Bachelor's Degree in Electrical & Computer Dept.</h3>
-                    <p class="text-sm text-slate-400">Menofiya University • Grade: Good</p>
-                    <p class="text-sm text-slate-300 pt-2 border-t border-slate-800"><strong class="text-white">Graduation Project:</strong> 3D printer (Grade: Excellent)</p>
+                <h2 class="text-2xl font-extrabold text-white mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap text-brand-500"></i> Education
+                </h2>
+                <div class="glass-card p-8 rounded-3xl space-y-3">
+                    <span class="text-xs text-brand-400 font-bold px-3 py-1 bg-brand-500/10 rounded-full inline-block">09/2015 - 01/2020</span>
+                    <h3 class="text-xl font-bold text-white">Bachelor's Degree in Electrical & Computer Dept.</h3>
+                    <p class="text-sm text-slate-400 font-medium">Menofiya University • Grade: Good</p>
+                    <p class="text-sm text-slate-300 pt-3 border-t border-slate-800"><strong class="text-white">Graduation Project:</strong> 3D printer (Grade: Excellent)</p>
                 </div>
             </div>
             <div>
-                <h2 class="text-2xl font-bold text-white mb-6"><i class="fa-solid fa-certificate text-brand-500 mr-2"></i> Certifications & Training</h2>
+                <h2 class="text-2xl font-extrabold text-white mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-certificate text-brand-500"></i> Certifications & Training
+                </h2>
                 <div class="space-y-4">
-                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-2">
-                        <span class="text-xs text-brand-400 font-semibold">07/2022 • Menofiya Branch</span>
-                        <h3 class="text-base font-bold text-white">Information Technology Institute (ITI)</h3>
-                        <p class="text-xs text-slate-400">PHP Full Stack Track - Intensive training program covering full stack development, APIs, and agile practices.</p>
+                    <div class="glass-card p-6 rounded-3xl space-y-2">
+                        <span class="text-xs text-brand-400 font-bold px-2.5 py-1 bg-brand-500/10 rounded-full inline-block">07/2022 • Menofiya Branch</span>
+                        <h3 class="text-lg font-bold text-white">Information Technology Institute (ITI)</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">PHP Full Stack Track - Intensive training program covering full stack development, APIs, and agile practices.</p>
                     </div>
-                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-2">
-                        <span class="text-xs text-brand-400 font-semibold">Internship</span>
-                        <h3 class="text-base font-bold text-white">The Sparks Foundation</h3>
-                        <p class="text-xs text-slate-400">Developed coding skills by participating in large practical web development projects.</p>
+                    <div class="glass-card p-6 rounded-3xl space-y-2">
+                        <span class="text-xs text-brand-400 font-bold px-2.5 py-1 bg-slate-800 rounded-full inline-block text-slate-300">Internship</span>
+                        <h3 class="text-lg font-bold text-white">The Sparks Foundation</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Developed coding skills by participating in large practical web development projects.</p>
                     </div>
                 </div>
             </div>
@@ -292,21 +333,21 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-white mb-3">Let's Build Something Great Together</h2>
-        <p class="text-slate-400 mb-8 max-w-md mx-auto">Feel free to reach out via email or connect with me on LinkedIn.</p>
-        <div class="flex justify-center gap-4">
-            <a href="mailto:ahmohsen900@gmail.com" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-3 rounded-xl transition shadow-lg shadow-brand-600/20 flex items-center gap-2">
-                <i class="fa-solid fa-envelope"></i> ahmohsen900@gmail.com
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Let's Build Something Great Together</h2>
+        <p class="text-slate-400 mb-10 max-w-md mx-auto text-base">Feel free to reach out via email or connect with me on LinkedIn for opportunities.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="mailto:ahmohsen900@gmail.com" class="bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-xl shadow-brand-600/20 hover:scale-105 flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-lg"></i> ahmohsen900@gmail.com
             </a>
-            <a href="https://linkedin.com/in/ahmed-mohsen-69083b22a" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700 transition flex items-center gap-2">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            <a href="https://linkedin.com/in/ahmed-mohsen-69083b22a" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-800 transition-all hover:border-slate-700 flex items-center gap-3">
+                <i class="fa-brands fa-linkedin text-lg text-brand-400"></i> LinkedIn Profile
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-xs text-slate-500">
+    <footer class="py-8 bg-slate-950 border-t border-slate-800/80 text-center text-xs text-slate-500">
         <p>© 2026 Ahmed Mohsen Ali. All rights reserved.</p>
     </footer>
 
